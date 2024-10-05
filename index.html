@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <link rel="icon" href="icon.png" type="image/png">
+    <style>
+        body{
+            background-image: url(background.avif);
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+            font-family: Segoe UI;
+            padding: 40px;
+        }
+        .firstsection{
+            background-color: rgba(0, 0, 0, 0.411);
+            width: 250px;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.377);
+            color: rgba(255, 255, 255, 0.836);
+            backdrop-filter: blur(30px) !important;
+
+        }
+        .secondsection{
+            background-color: rgba(0, 0, 0, 0.411);
+            width: 250px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.377);
+            color: rgba(255, 255, 255, 0.836);
+            margin-top: 20px;
+            height: 450px;  
+            backdrop-filter: blur(30px) !important;
+            padding: 0px;
+            overflow: hidden;
+        }
+        .scrollable{
+            padding: 20px;
+            
+            scrollbar-width: thin;
+    scrollbar-color: rgba(216, 216, 216, 0.411) rgba(0, 0, 0, 0.411);
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+        }
+        .searchsection{
+            margin-left: 40px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.411);
+            width: 70%;
+            backdrop-filter: blur(30px) !important;
+        }
+        .searchinput{
+            height: 50px;
+            padding: 10px;
+            padding-left: 10px;
+            border: none;
+            width: 300px
+        }
+        .aftersearchinput{
+            padding: 5px;
+            height: 50px;
+            width: 50px;
+            margin-left: 10px;
+            border-radius: 50px;    
+            border: none;
+            background-color: rgba(0, 0, 0, 0.274);
+            color: rgba(255, 255, 255, 0.644);
+            transition: 0.5s;
+        }
+        .aftersearchinput:hover{
+            background-color: rgba(0, 0, 0, 0.411);
+            transition: 0.2s;
+            color: white;
+            box-shadow:  0px 0px 10px 0px rgba(0, 0, 0, 0.377);
+        }
+        .aftersearchinput:focus{
+            background-color: black;
+            box-shadow: none;
+        }
+        .searchbar{
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 50px;
+            
+        }
+        .searchbar span img{
+            height: 50px;
+            width: 50px;
+        }
+        .searchbar span2{
+            background-color: white;
+            border-radius: 50px;
+            padding: 0px;
+        }
+        .searchbar:focus {
+    outline: 2px solid black !important;
+}
+        span2 button{
+            background-color: white;
+            border: none;
+            padding: 10px;
+            margin-right: 20px;
+        }
+        input:focus{
+ outline: 0;
+ /* some people use shadows too */
+ box-shadow: none;
+}
+.searchbar:active {
+    outline: 2px solid black !important;
+}
+.containeroftodoheading{
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.74);
+}
+.containeroftodoheading button{
+    position: absolute;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.397);
+    color: rgba(255, 255, 255, 0.753);
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    height: 30px;
+    padding: 10px;
+    width: 30px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 20px;
+    transition: 0.2s;
+}
+.containeroftodoheading button:hover{
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.377);
+    transition: 0.2s;
+    color: white;
+}
+.rowoftodolist{
+    background-color: rgba(0, 0, 0, 0.541);
+    border-radius: 20px;
+    height: 70px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+.rowoftodolist img{
+    height: 40px;
+    width: 40px;
+    margin-top: 7px;
+}
+.imgcontainertodo{
+    margin-right: 5px;
+}
+.rowoftodolist h6{
+margin-top: 5px;
+margin-left: 6px;
+}
+.appsgrid{
+    background-color: rgba(0, 0, 0, 0.411);
+    margin-left: 40px; 
+    margin-top: 20px; 
+    width: 70%;    
+    border-radius: 20px;    
+    backdrop-filter: blur(10px) !important;
+    padding: 30px;
+}
+.appicon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 10px;  
+}
+.appicon:hover{
+    background-color: rgba(0, 0, 0, 0.541);
+    transition: 0.2s;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.377);
+    cursor: pointer;
+}
+.appicon a{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    position: sticky;
+    color: white;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div class="row">
+    <div class="firstsection col-lg-4">
+    <h4>Hello, Rohan!</h4>
+    </div>
+    <div class="searchsection col-lg-6">
+        <div class="searchbar" tabindex="1">
+            <form action="https://google.com/search" method="GET" target="_blank">
+            <span><img src="google.webp" alt="G"></span>
+        <input type="search" name="q" class="searchinput" placeholder="Search With Google">
+        <span2>
+            <button type="submit"><i class="bi bi-search"></i></button>
+        </span>
+    </form>
+        </div>
+        <button class="aftersearchinput"><i class="bi bi-envelope-fill"></i></button>
+        <button class="aftersearchinput"><i class="bi bi-youtube"></i></button>
+        <a href="https://youtube.com"><button class="aftersearchinput"><i class="bi bi-youtube"></i></button></a>
+
+        <button class="aftersearchinput"><i class="bi bi-facebook"></i></button>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-4 secondsection">
+        <div class="scrollable">
+    <div class="row">
+        <div class="col-lg-12 containeroftodoheading"><span class="pendingtasksheading">Pending Tasks</span> <button>+</button></div>
+    </div>
+    <div class="todolist">
+    <div class="row">
+        <div class="col-lg-12 rowoftodolist"><div class="row"><div class="col-lg-2 imgcontainertodo"><img src="img/logo.png" alt=""></div><div class="col-lg-9"><h6>IntroTaps Premium Card Design   </h6></div></div></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 rowoftodolist"><div class="row"><div class="col-lg-2 imgcontainertodo"><img src="google.webp" alt=""></div><div class="col-lg-9"><h6>SEO k liye blog likha  hay </h6></div></div></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 rowoftodolist"><div class="row"><div class="col-lg-2 imgcontainertodo"><img src="google.webp" alt=""></div><div class="col-lg-9"><h6>IntroTaps Premium Card Design   </h6></div></div></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 rowoftodolist"><div class="row"><div class="col-lg-2 imgcontainertodo"><img src="google.webp" alt=""></div><div class="col-lg-9"><h6>IntroTaps Premium Card Design   </h6></div></div></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 rowoftodolist"><div class="row"><div class="col-lg-2 imgcontainertodo"><img src="google.webp" alt=""></div><div class="col-lg-9"><h6>IntroTaps Premium Card Design   </h6></div></div></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 rowoftodolist"><div class="row"><div class="col-lg-2 imgcontainertodo"><img src="google.webp" alt=""></div><div class="col-lg-9"><h6>IntroTaps Premium Card Design   </h6></div></div></div>
+    </div>
+    </div>
+</div>
+</div>
+<div class="col-lg-6 appsgrid">
+<div class="row">
+    <div class="col-lg-2 appicon"><a href="https://github.com/rohanghalib"><img src="img/logos/github.png" height="100px" alt=""> <span>Github</span></a></div>
+    <div class="col-lg-2 appicon"><a href="https://chat.openai.com"><img src="img/logos/chatgpt.png" height="100px" alt=""> <span>ChatGPT</span></a></div>
+    <div class="col-lg-2 appicon"><a href="https://https://facebook.com"><img src="img/logos/facebook.png" height="100px" alt=""> <span>Facebook</span></a></div>
+    <div class="col-lg-2 appicon"><a href="https://hpanel.hostinger.com"><img src="img/logos/hostinger.png" height="100px" alt=""> <span>Hpanel</span></a></div>
+    <div class="col-lg-2 appicon"><a href="https://linkedin.com"><img src="img/logos/linkedin.png" height="100px" alt=""> <span>Linkedin</span></a></div>
+    <div class="col-lg-2 appicon"><a href="https://youtube.com"><img src="img/logos/youtube.png" height="100px" alt=""> <span>Youtube</span></a></div>
+</div>
+<div class="row">
+  
+</div>
+
+
+</div>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

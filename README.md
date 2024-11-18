@@ -62,7 +62,6 @@ A modern, visually appealing browser starting page for those tired of the defaul
 ![Light Mode Example](#)  
 ![Dark Mode Example](#)  
 
-*(Add screenshots here to showcase your design.)*  
 
 ---
 
